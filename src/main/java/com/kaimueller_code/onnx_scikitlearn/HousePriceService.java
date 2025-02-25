@@ -18,7 +18,7 @@ public class HousePriceService {
 
     HousePriceService() throws OrtException, IOException {
         //Load Model for californian House Prices
-        String modelFilePath = new ClassPathResource("static/house_prices-random_forest_regression.onnx").getURI().getPath();
+        String modelFilePath = new ClassPathResource("static/house_prices.onnx").getFile().getPath();
         this.env = OrtEnvironment.getEnvironment();
         this.session = env.createSession(modelFilePath);
     }
